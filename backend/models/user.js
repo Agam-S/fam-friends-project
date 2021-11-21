@@ -3,19 +3,29 @@ const family = require("./family");
 const friends = require("./friends");
 
 const userSchema = new mongoose.Schema({
-  userName: {
+  name: {
     type: String,
+    min: 4,
+    max: 255,
+    required: true,
   },
 
-  userMail: {
+  email: {
     type: String,
+    min: 4,
+    max: 255,
+    required: true,
   },
-  userPassword: {
+  password: {
     type: String,
+    min: 6,
+    max: 1024,
+    required: true,
   },
-  family: [[mongoose.Schema.Types.ObjectId], { ref: "family" }],
-
-  friends: [[mongoose.Schema.Types.ObjectId], { ref: "friends" }],
+  date: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
 module.exports = mongoose.model("User", userSchema);
