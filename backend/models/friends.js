@@ -15,9 +15,8 @@ const friSchema = new mongoose.Schema({
   favFood: {
     type: String,
   },
-  User: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
+  user: {
+    type: String,
   },
 });
 
