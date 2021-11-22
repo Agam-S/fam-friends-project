@@ -22,7 +22,7 @@ mongoose.connect(process.env.DBS_CONNECTION, { useNewUrlParser: true }, () => {
 // MIDDLEWARE CONFIGS
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 mongoose.Promise = global.Promise;
 
 // ROUTES REDIRECTION

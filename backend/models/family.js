@@ -13,6 +13,10 @@ const famSchema = new mongoose.Schema({
   favFood: {
     type: String,
   },
+  User: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
 });
 
 module.exports = mongoose.model("family", famSchema);
