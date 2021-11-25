@@ -14,10 +14,8 @@ const famSchema = new mongoose.Schema({
     type: String,
   },
   user: {
-    id: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-    },
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
   },
 });
 

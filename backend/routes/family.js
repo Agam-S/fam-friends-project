@@ -1,14 +1,33 @@
 // PACKAGES
 const router = require("express").Router();
-const mongoose = require("mongoose");
-
 // IMPORT FILES
 const Family = require("../models/family");
 const verifyToken = require("./verifyToken");
-const vefifyToken = require("./verifyToken");
 // ROUTES
-// post method where API uses vefifyToken middleware to verify token and then creates a new family.
-// the new family gets the user _id from the token and saves it to the database
-// router.post("/", verifyToken, async (req, res) => {
-//     const newFamily = new Family({
+router.get("/", verifyToken, async (req, res) => {
+  try {
+    const family = await Family.find({ user: req.user._id });
+    res.json(family);
+  } catch (error) {
+    res.json({ message: error });
+  }
+});
+
+router.post("/", verifyToken, async (req, res) => {
+  try {
+    // const { id } = res.send(req.user._id);
+    const id = req.user._id;
+    const newFamily = new Family({
+      name: req.body.name,
+      age: req.body.age,
+      hobbies: req.body.hobbies,
+      favFood: req.body.favFood,
+      user: id,
+    });
+    const savedFamily = await newFamily.save();
+    res.json(savedFamily);
+  } catch (err) {
+    res.json({ message: err });
+  }
+});
 module.exports = router;
