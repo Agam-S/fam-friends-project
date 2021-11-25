@@ -30,4 +30,29 @@ router.post("/", verifyToken, async (req, res) => {
     res.json({ message: err });
   }
 });
+router.put("/", verifyToken, async (req, res) => {
+  try {
+    const updatedFamily = await Family.findOneAndUpdate(
+      { _id: req.body._id },
+      {
+        name: req.body.name,
+        age: req.body.age,
+        hobbies: req.body.hobbies,
+        favFood: req.body.favFood,
+      }
+    );
+    res.json(updatedFamily);
+  } catch (err) {
+    res.json({ message: err });
+  }
+});
+
+router.delete("/", verifyToken, async (req, res) => {
+  try {
+    const delPerson = await Friends.findByIdAndDelete(req.body._id);
+    res.json({ message: "Family Member deleted", delPerson });
+  } catch (error) {
+    res.json({ message: error });
+  }
+});
 module.exports = router;
