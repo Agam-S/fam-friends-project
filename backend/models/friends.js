@@ -16,7 +16,12 @@ const friSchema = new mongoose.Schema({
     type: String,
   },
   user: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
+  date: {
+    type: Date,
+    default: Date.now,
   },
 });
 

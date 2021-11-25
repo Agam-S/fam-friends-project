@@ -7,7 +7,7 @@ const cors = require("cors");
 
 // CONFIGS
 dotenv.config();
-PORT = 3000;
+PORT = process.env.PORT | 3000;
 
 // IMPORT FILES
 const family = require("./routes/family");
@@ -20,6 +20,7 @@ mongoose.connect(process.env.DBS_CONNECTION, { useNewUrlParser: true }, () => {
 });
 
 // MIDDLEWARE CONFIGS
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
