@@ -1,18 +1,17 @@
-#title {
-  background-color: #ff4c68;
-}
-h1 {
-  font-family: "Montserrat";
-  font-size: 3rem;
-  line-height: 1.5;
-  color: #fff;
-}
-
-.container-fluid {
-  padding: 3% 15%;
-}
-
 nav {
   font-size: 25px;
   font-family: "Montserrat";
+  text-align: right;
+}
+a {
+  text-decoration: none;
+  padding: 25px;
+  color: blue;
+}
+a:hover {
+  color: yellow;
+}
+ul {
+  list-style: none;
+  display: inline-flex;
 }

@@ -1,0 +1,11 @@
+.container {
+  text-align: center;
+  padding: 200px;
+  background-color: rgba(240, 238, 132, 0.801);
+  height: 300px;
+  border-radius: 5%;
+}
+input,
+button {
+  font-size: 20px;
+}

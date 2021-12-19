@@ -7,8 +7,22 @@
 }
 .heading {
   margin: 140px;
+  background-color: rgb(0, 132, 255);
+  color: blue;
+  height: 200px;
+  padding: 100px;
+  border-radius: 20%;
+}
+.heading:hover {
+  background-color: blue;
+  color: yellow;
 }
 .purpose,
 .features {
   margin-top: 350px;
+}
+
+.purpose {
+  text-align: center;
+  border-style: dotted;
 }
