@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="container">
+  <h1>Login Here !</h1>
+  <form class="form">
+    <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      class="form"
+      required
+    />
+    <input
+      type="password"
+      name="password"
+      placeholder="Password"
+      class="form"
+      required
+    />
+    <button class="btn btn-primary">Login !</button>
+    <h5>Don't have an account yet?</h5>
+    <h5>Click <a [routerLink]="['/signup']">here</a> to sign up!</h5>
+  </form>
+</div>

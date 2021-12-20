@@ -1,27 +1,23 @@
 <div class="container">
   <h1>Sign Up Here !</h1>
-  <form>
-    <input
-      type="text"
-      name="name"
-      placeholder="Name"
-      class="form-control"
-      required
-    />
+  <form class="form">
+    <input type="text" name="name" placeholder="Name" class="form" required />
     <input
       type="email"
       name="email"
       placeholder="Email"
-      class="form-control"
+      class="form"
       required
     />
     <input
       type="password"
       name="password"
       placeholder="Password"
-      class="form-control"
+      class="form"
       required
     />
-    <button class="btn btn-primary">Sign Up</button>
+    <button class="btn btn-primary">Sign Up !</button>
+    <h5>Already got an account?</h5>
+    <h5>Click <a [routerLink]="['/login']">here</a> to login !</h5>
   </form>
 </div>

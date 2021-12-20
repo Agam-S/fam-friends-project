@@ -1,0 +1,36 @@
+.container {
+  text-align: center;
+  padding: 200px;
+  background-color: rgba(240, 238, 132, 0.801);
+  height: 600px;
+  border-radius: 5%;
+}
+input,
+button {
+  font-size: 25px;
+  padding: 5px;
+  margin: 15px;
+}
+.form {
+  text-align: center;
+  display: block;
+  padding: 10px;
+}
+.form:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.4rem rgba(116, 49, 192, 0.25);
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+}
+h1 {
+  /* move h1 above */
+  text-align: center;
+  font-size: 50px;
+  color: #3c3ead;
+  margin-top: -100px;
+}
