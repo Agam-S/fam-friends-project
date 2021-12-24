@@ -7,7 +7,7 @@ const cors = require("cors");
 
 // CONFIGS
 dotenv.config();
-PORT = process.env.PORT | 3000;
+PORT = process.env.PORT | 5000;
 
 // IMPORT FILES
 const family = require("./routes/family");
@@ -29,7 +29,7 @@ mongoose.Promise = global.Promise;
 // ROUTES REDIRECTION
 app.use("/family", family);
 app.use("/friends", friends);
-app.use("/user", user);
+app.use("/", user);
 
 // SERVER
 app.listen(PORT, () => {

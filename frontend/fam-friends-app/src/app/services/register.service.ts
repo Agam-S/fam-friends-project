@@ -7,7 +7,7 @@ import { ISignup } from '../models/signup';
   providedIn: 'root',
 })
 export class RegisterService {
-  readonly demoUrl = 'http://localhost:5001/user/signup';
+  readonly demoUrl = 'http://localhost:5000/signup';
   constructor(private _http: HttpClient) {}
 
   PostUser(user: ISignup): Observable<ISignup> {

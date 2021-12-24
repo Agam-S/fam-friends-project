@@ -1,8 +1,16 @@
 <div class="container">
   <h1>Sign Up Here !</h1>
-  <form class="form">
-    <input type="text" name="name" placeholder="Name" class="form" required />
+  <div class="form">
     <input
+      #name
+      type="text"
+      name="name"
+      placeholder="Name"
+      class="form"
+      required
+    />
+    <input
+      #email
       type="email"
       name="email"
       placeholder="Email"
@@ -10,14 +18,15 @@
       required
     />
     <input
+      #password
       type="password"
       name="password"
       placeholder="Password"
       class="form"
       required
     />
-    <button class="btn btn-primary">Sign Up !</button>
+    <button class="btn btn-primary" (click)="signUp()">Sign Up !</button>
     <h5>Already got an account?</h5>
     <h5>Click <a [routerLink]="['/login']">here</a> to login !</h5>
-  </form>
+  </div>
 </div>
