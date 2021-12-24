@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 // IMPORT FILES
 const User = require("../models/user");
 const { signUpValid, signInValid } = require("../validation");
+const verifyToken = require("./verifyToken");
 
 // ROUTES
 
@@ -58,6 +59,11 @@ router.post("/login", async (req, res) => {
   const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
 
   res.json({ token: token });
+});
+
+// home
+router.get("/dash", verifyToken, async (req, res) => {
+  res.send("Welcome to the Dashboard");
 });
 
 module.exports = router;

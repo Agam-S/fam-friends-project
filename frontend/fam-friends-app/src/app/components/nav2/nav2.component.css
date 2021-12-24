@@ -1,0 +1,17 @@
+nav {
+  font-size: 25px;
+  font-family: "Montserrat";
+  text-align: right;
+}
+a {
+  text-decoration: none;
+  padding: 25px;
+  color: blue;
+}
+a:hover {
+  color: yellow;
+}
+ul {
+  list-style: none;
+  display: inline-flex;
+}

@@ -9,9 +9,18 @@ import { NavComponent } from './components/nav/nav.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashComponent } from './components/dash/dash.component';
+import { Nav2Component } from './components/nav2/nav2.component';
 
 @NgModule({
-  declarations: [AppComponent, MainPageComponent, NavComponent, SignupComponent, LoginComponent, DashComponent],
+  declarations: [
+    AppComponent,
+    MainPageComponent,
+    NavComponent,
+    SignupComponent,
+    LoginComponent,
+    DashComponent,
+    Nav2Component,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
