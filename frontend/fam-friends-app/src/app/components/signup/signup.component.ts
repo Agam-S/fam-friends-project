@@ -9,6 +9,7 @@ import { RegisterService } from 'src/app/services/register.service';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
+  errorString: string;
   user: ISignup;
   @ViewChild('name') nameInput: ElementRef;
   @ViewChild('email') emailInput: ElementRef;
@@ -28,9 +29,13 @@ export class SignupComponent implements OnInit {
       email: email,
       password: password,
     };
-    this.signUpService
-      .PostUser(this.user)
-      .subscribe((res) => console.log('success', res));
-    this.router.navigate(['/login']);
+    this.signUpService.PostUser(this.user).subscribe(
+      (res: any) => {
+        this.errorString = 'Email Successfully Registered';
+      },
+      (err: any) => {
+        this.errorString = 'Email Already Exists';
+      }
+    );
   }
 }

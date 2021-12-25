@@ -27,6 +27,9 @@
       required
     />
     <button class="btn btn-primary" (click)="signUp()">Sign Up !</button>
+    <div class="alert" *ngIf="errorString">
+      {{ errorString }}
+    </div>
     <h5>Already got an account?</h5>
     <h5>Click <a [routerLink]="['/login']">here</a> to login !</h5>
   </div>

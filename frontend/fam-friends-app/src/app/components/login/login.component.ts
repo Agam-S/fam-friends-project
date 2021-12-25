@@ -33,8 +33,8 @@ export class LoginComponent implements OnInit {
         this.loginService.setToken(res['token']);
         this.router.navigate(['/dash']);
       },
-      (err) => {
-        this.errorString = err.error.message;
+      (err: any) => {
+        this.errorString = 'Email or Password is incorrect';
       }
     );
   }
