@@ -10,6 +10,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashComponent } from './components/dash/dash.component';
 import { Nav2Component } from './components/nav2/nav2.component';
+import { FriendsComponent } from './components/friends/friends.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { Nav2Component } from './components/nav2/nav2.component';
     LoginComponent,
     DashComponent,
     Nav2Component,
+    FriendsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
