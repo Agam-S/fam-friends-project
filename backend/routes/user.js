@@ -64,7 +64,7 @@ router.post("/login", async (req, res) => {
 // home
 router.get("/dash", verifyToken, async (req, res) => {
   try {
-    const user = await user.find({ user: req.user._id });
+    const user = await User.find({ user: req.user._id });
     res.json(user);
   } catch (error) {
     res.json({ message: error });

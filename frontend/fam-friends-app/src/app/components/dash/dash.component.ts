@@ -9,6 +9,7 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./dash.component.css'],
 })
 export class DashComponent implements OnInit {
+  user: any;
   constructor(
     private dashService: DashService,
     private loginService: LoginService,
@@ -20,6 +21,7 @@ export class DashComponent implements OnInit {
       this.router.navigate(['/login']);
     }
     this.dashService.GetDash().subscribe((data) => {
+      this.user = data;
       console.log(data);
     });
   }
