@@ -1,1 +1,10 @@
-<p>friends works!</p>
+<app-nav2></app-nav2>
+<div class="container card" *ngFor="let user of this.friendsList">
+  <h6>Name: {{ user.name }}</h6>
+  <h6>Age: {{ user.age }}</h6>
+  <h6>Hobbies: {{ user.hobbies }}</h6>
+  <h6>Favourite Food: {{ user.favFood }}</h6>
+</div>
+<div *ngIf="!this.friendsList">
+  <h6>No friends found</h6>
+</div>

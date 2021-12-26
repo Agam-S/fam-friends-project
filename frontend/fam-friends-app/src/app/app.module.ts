@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DashComponent } from './components/dash/dash.component';
 import { Nav2Component } from './components/nav2/nav2.component';
 import { FriendsComponent } from './components/friends/friends.component';
+import { FamilyComponent } from './components/family/family.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FriendsComponent } from './components/friends/friends.component';
     DashComponent,
     Nav2Component,
     FriendsComponent,
+    FamilyComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

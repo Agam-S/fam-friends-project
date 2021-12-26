@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FriendsService } from 'src/app/services/friends.service';
 import { LoginService } from 'src/app/services/login.service';
+import { friends } from 'src/app/models/friends';
 
 @Component({
   selector: 'app-friends',
