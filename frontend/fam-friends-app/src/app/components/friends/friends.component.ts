@@ -19,9 +19,10 @@ export class FriendsComponent implements OnInit {
   ngOnInit() {
     if (!this.login.isLoggedIn()) {
       this.router.navigate(['/login']);
-    }
-    this.friendsServices.getFriends().subscribe((data) => {
-      console.log(data);
-    });
+    } else
+      this.friendsServices.getFriends().subscribe((friends) => {
+        this.friendsList = friends;
+        console.log(friends);
+      });
   }
 }

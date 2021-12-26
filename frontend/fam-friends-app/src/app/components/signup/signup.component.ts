@@ -24,11 +24,14 @@ export class SignupComponent implements OnInit {
     let email = this.emailInput.nativeElement.value;
     let password = this.passwordInput.nativeElement.value;
 
-    this.user = {
-      name: name,
-      email: email,
-      password: password,
-    };
+    if (name === '' || email === '' || password === '') {
+      this.errorString = 'Please fill out all fields';
+    } else
+      this.user = {
+        name: name,
+        email: email,
+        password: password,
+      };
     this.signUpService.PostUser(this.user).subscribe(
       (res: any) => {
         this.errorString = 'Email Successfully Registered';

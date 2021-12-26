@@ -8,11 +8,11 @@ import { ILogin } from '../models/login';
 })
 export class LoginService {
   readonly demoUrl = 'http://localhost:5000/login';
-  noAuthHeader = { headers: new HttpHeaders({ NoAuth: 'True' }) };
+  // noAuthHeader = { headers: new HttpHeaders({ NoAuth: 'True' }) };
   constructor(private _http: HttpClient) {}
 
   Login(auth: any) {
-    return this._http.post(this.demoUrl, auth, this.noAuthHeader);
+    return this._http.post(this.demoUrl, auth);
   }
   setToken(token: string) {
     localStorage.setItem('token', token);
@@ -25,17 +25,17 @@ export class LoginService {
   deleteToken() {
     localStorage.removeItem('token');
   }
-  getUserPayload() {
-    var token = this.getToken();
-    if (token) {
-      var userPayload = atob(token.split('.')[1]);
-      return JSON.parse(userPayload);
-    } else return null;
-  }
-
+  // function 'isLoggedIn' checks if the user is logged in by checking if the token is present in the local storage
   isLoggedIn() {
-    var userPayload = this.getUserPayload();
-    if (userPayload) return userPayload;
-    else return false;
+    const token = this.getToken();
+    if (token) {
+      return true;
+    }
+    return false;
+  }
+  // function 'getUserPayload' returns the token
+  getUserPayload() {
+    const token = this.getToken();
+    return token;
   }
 }
