@@ -26,4 +26,5 @@ export class FriendsComponent implements OnInit {
         console.log(friends);
       });
   }
+  addFriend() {}
 }

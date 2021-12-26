@@ -24,6 +24,11 @@ export class LoginComponent implements OnInit {
   login() {
     let email = this.emailInput.nativeElement.value;
     let password = this.passwordInput.nativeElement.value;
+
+    if (email === '' || password === '') {
+      alert('Please Fill Out all fields');
+    }
+
     this.user = {
       email: email,
       password: password,
@@ -34,7 +39,8 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/dash']);
       },
       (err: any) => {
-        this.errorString = 'Email or Password is incorrect';
+        this.errorString = this.errorString = err.error;
+        console.log(this.errorString);
       }
     );
   }

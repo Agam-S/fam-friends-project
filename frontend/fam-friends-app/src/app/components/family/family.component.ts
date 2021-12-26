@@ -25,4 +25,5 @@ export class FamilyComponent implements OnInit {
         console.log(family);
       });
   }
+  addMem() {}
 }

@@ -1,5 +1,9 @@
 <app-nav2></app-nav2>
-<div class="container card" *ngFor="let user of this.friendsList">
+<h2>Friends !</h2>
+<h4>Here <i>you</i> can add, edit, or delete your friends.</h4>
+<button class="btn btn-success" (click)="addFriend()">Add a Friend</button>
+<br />
+<div class="fri" *ngFor="let user of this.friendsList">
   <h6>Name: {{ user.name }}</h6>
   <h6>Age: {{ user.age }}</h6>
   <h6>Hobbies: {{ user.hobbies }}</h6>

@@ -20,10 +20,10 @@
       min="6"
     />
     <button class="btn btn-primary" (click)="login()">Login !</button>
+    <div class="alert" *ngIf="errorString">
+      {{ errorString }}
+    </div>
     <h5>Don't have an account yet?</h5>
     <h5>Click <a [routerLink]="['/signup']">here</a> to sign up!</h5>
-  </div>
-  <div class="alert" *ngIf="errorString">
-    {{ errorString }}
   </div>
 </div>

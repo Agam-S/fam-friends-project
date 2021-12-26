@@ -1,5 +1,9 @@
 <app-nav2></app-nav2>
-<div class="container card" *ngFor="let user of this.familyList">
+<h2>Family !</h2>
+<h4>Here <i>you</i> can add, edit, or delete your family members.</h4>
+<button class="btn btn-success" (click)="addMem()">Add a Member</button>
+<br />
+<div class="fam" *ngFor="let user of this.familyList">
   <h6>Name: {{ user.name }}</h6>
   <h6>Age: {{ user.age }}</h6>
   <h6>Hobbies: {{ user.hobbies }}</h6>

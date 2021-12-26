@@ -25,19 +25,20 @@ export class SignupComponent implements OnInit {
     let password = this.passwordInput.nativeElement.value;
 
     if (name === '' || email === '' || password === '') {
-      this.errorString = 'Please fill out all fields';
-    } else
-      this.user = {
-        name: name,
-        email: email,
-        password: password,
-      };
+      alert('Please fill out all fields');
+    }
+
+    this.user = {
+      name: name,
+      email: email,
+      password: password,
+    };
     this.signUpService.PostUser(this.user).subscribe(
       (res: any) => {
         this.errorString = 'Email Successfully Registered';
       },
       (err: any) => {
-        this.errorString = 'Email Already Exists';
+        this.errorString = err.error;
       }
     );
   }

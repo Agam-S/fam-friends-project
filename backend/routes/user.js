@@ -18,7 +18,7 @@ router.post("/signup", async (req, res) => {
 
   // if user already exists
   const userExists = await User.findOne({ email: req.body.email });
-  if (userExists) return res.status(200).send("Email/ User already exists");
+  if (userExists) return res.status(400).send("Email/ User already exists");
 
   // Hash and Salt Passwords
   const salt = await bcrypt.genSalt(10);
@@ -47,7 +47,7 @@ router.post("/login", async (req, res) => {
 
   // check if email exists
   const user = await User.findOne({ email: req.body.email });
-  if (!user) return res.status(200).send("Email not found ://");
+  if (!user) return res.status(400).send("Email not found ://");
 
   // check if password is correct
   const correctPass = await bcrypt.compare(req.body.password, user.password);
