@@ -13,6 +13,15 @@ router.get("/", verifyToken, async (req, res) => {
   }
 });
 
+router.get("/:_id", verifyToken, async (req, res) => {
+  try {
+    const family = await Family.findById(req.params._id);
+    res.json(family);
+  } catch (error) {
+    res.json({ message: error });
+  }
+});
+
 router.post("/add", verifyToken, async (req, res) => {
   try {
     // const { id } = res.send(req.user._id);
@@ -30,10 +39,10 @@ router.post("/add", verifyToken, async (req, res) => {
     res.json({ message: err });
   }
 });
-router.put("/", verifyToken, async (req, res) => {
+router.put("/edit/:_id", verifyToken, async (req, res) => {
   try {
     const updatedFamily = await Family.findOneAndUpdate(
-      { _id: req.body._id },
+      { _id: req.params._id },
       {
         name: req.body.name,
         age: req.body.age,
