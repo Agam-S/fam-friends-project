@@ -25,4 +25,11 @@ export class FamilyService {
       headers: this.header,
     });
   }
+  deleteFam(_id: string) {
+    this.header = new HttpHeaders().set('token', this.loginService.getToken()!);
+
+    return this._http.delete<family>(this.demoURl + '/' + _id, {
+      headers: this.header,
+    });
+  }
 }

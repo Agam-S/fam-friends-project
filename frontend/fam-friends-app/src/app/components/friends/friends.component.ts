@@ -29,4 +29,11 @@ export class FriendsComponent implements OnInit {
   addFriend() {
     this.router.navigate(['/friends/add']);
   }
+  deleteFri(_id: string) {
+    if (confirm('Are you sure you want to delete this friend??!')) {
+      this.friendsServices.deleteFriend(_id).subscribe((res: any) => {
+        alert('Friend Deleted!');
+      });
+    }
+  }
 }

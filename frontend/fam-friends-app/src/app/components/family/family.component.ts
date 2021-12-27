@@ -28,4 +28,11 @@ export class FamilyComponent implements OnInit {
   addMem() {
     this.router.navigate(['/family/add']);
   }
+  deleteFam(_id: string) {
+    if (confirm('Are you sure you want to delete this member??!')) {
+      this.familyService.deleteFam(_id).subscribe((res: any) => {
+        alert('Member Deleted!');
+      });
+    }
+  }
 }

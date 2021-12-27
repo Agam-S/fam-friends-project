@@ -47,9 +47,9 @@ router.put("/", verifyToken, async (req, res) => {
   }
 });
 
-router.delete("/", verifyToken, async (req, res) => {
+router.delete("/:_id", verifyToken, async (req, res) => {
   try {
-    const delPerson = await Friends.findByIdAndDelete(req.body._id);
+    const delPerson = await Family.findByIdAndDelete(req.params._id);
     res.json({ message: "Family Member deleted", delPerson });
   } catch (error) {
     res.json({ message: error });

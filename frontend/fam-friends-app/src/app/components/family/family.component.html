@@ -9,8 +9,8 @@
   <h6>Hobbies: {{ user.hobbies }}</h6>
   <h6>Favourite Food: {{ user.favFood }}</h6>
   <button class="btn btn-warning">Edit</button>
-  <button class="btn btn-danger">Delete</button>
+  <button class="btn btn-danger" (click)="deleteFam(user._id)">Delete</button>
 </div>
-<div *ngIf="!this.familyList">
-  <h6>No members found...</h6>
+<div *ngIf="this.familyList == ''">
+  <h6 class="empty"><i>No members found...</i></h6>
 </div>

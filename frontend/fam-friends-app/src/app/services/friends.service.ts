@@ -26,4 +26,11 @@ export class FriendsService {
       headers: this.header,
     });
   }
+  deleteFriend(_id: string) {
+    this.header = new HttpHeaders().set('token', this.loginService.getToken()!);
+
+    return this._http.delete<friends>(this.demoURl + '/' + _id, {
+      headers: this.header,
+    });
+  }
 }
