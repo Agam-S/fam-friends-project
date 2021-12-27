@@ -33,6 +33,12 @@ export class FriendsComponent implements OnInit {
     if (confirm('Are you sure you want to delete this friend??!')) {
       this.friendsServices.deleteFriend(_id).subscribe((res: any) => {
         alert('Friend Deleted!');
+        let cUrl = this.router.url;
+        this.router
+          .navigateByUrl('/', { skipLocationChange: true })
+          .then(() => {
+            this.router.navigate([cUrl]);
+          });
       });
     }
   }

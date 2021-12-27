@@ -8,7 +8,7 @@
   <h6>Age: {{ user.age }}</h6>
   <h6>Hobbies: {{ user.hobbies }}</h6>
   <h6>Favourite Food: {{ user.favFood }}</h6>
-  <button class="btn btn-warning">Edit</button>
+  <button class="btn btn-warning" (click)="editFam(user._id)">Edit</button>
   <button class="btn btn-danger" (click)="deleteFam(user._id)">Delete</button>
 </div>
 <div *ngIf="this.familyList == ''">

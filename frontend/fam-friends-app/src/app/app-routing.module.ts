@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddFamComponent } from './components/add-fam/add-fam.component';
 import { AddFriendComponent } from './components/add-friend/add-friend.component';
 import { DashComponent } from './components/dash/dash.component';
+import { FamEditComponent } from './components/fam-edit/fam-edit.component';
 import { FamilyComponent } from './components/family/family.component';
 import { FriendsComponent } from './components/friends/friends.component';
 import { LoginComponent } from './components/login/login.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'family', component: FamilyComponent },
   { path: 'friends/add', component: AddFriendComponent },
   { path: 'family/add', component: AddFamComponent },
+  { path: 'family/edit', component: FamEditComponent },
 ];
 
 @NgModule({

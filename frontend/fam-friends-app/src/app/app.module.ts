@@ -14,6 +14,7 @@ import { FriendsComponent } from './components/friends/friends.component';
 import { FamilyComponent } from './components/family/family.component';
 import { AddFriendComponent } from './components/add-friend/add-friend.component';
 import { AddFamComponent } from './components/add-fam/add-fam.component';
+import { FamEditComponent } from './components/fam-edit/fam-edit.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { AddFamComponent } from './components/add-fam/add-fam.component';
     FamilyComponent,
     AddFriendComponent,
     AddFamComponent,
+    FamEditComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
