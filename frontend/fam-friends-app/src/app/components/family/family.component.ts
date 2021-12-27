@@ -25,5 +25,7 @@ export class FamilyComponent implements OnInit {
         console.log(family);
       });
   }
-  addMem() {}
+  addMem() {
+    this.router.navigate(['/family/add']);
+  }
 }

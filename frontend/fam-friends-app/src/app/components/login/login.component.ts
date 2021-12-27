@@ -28,11 +28,11 @@ export class LoginComponent implements OnInit {
     if (email === '' || password === '') {
       alert('Please Fill Out all fields');
     }
-
     this.user = {
       email: email,
       password: password,
     };
+
     this.loginService.Login(this.user).subscribe(
       (res: any) => {
         this.loginService.setToken(res['token']);

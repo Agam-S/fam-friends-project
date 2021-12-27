@@ -1,0 +1,36 @@
+h2 {
+  text-align: center;
+  color: yellow;
+}
+.btn {
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+.button {
+  text-align: center;
+}
+
+.fam {
+  text-align: center;
+  font-size: 20px;
+}
+
+h6,
+input {
+  padding: 10px;
+}
+
+h4 {
+  text-align: center;
+}
+
+h4:hover {
+  color: blue;
+}
+
+input:focus {
+  background-color: lightblue;
+  box-shadow: 0 0 0 0.4rem rgb(226, 213, 95);
+}

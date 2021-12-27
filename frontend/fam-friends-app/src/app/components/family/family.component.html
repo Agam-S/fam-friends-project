@@ -8,7 +8,9 @@
   <h6>Age: {{ user.age }}</h6>
   <h6>Hobbies: {{ user.hobbies }}</h6>
   <h6>Favourite Food: {{ user.favFood }}</h6>
+  <button class="btn btn-warning">Edit</button>
+  <button class="btn btn-danger">Delete</button>
 </div>
 <div *ngIf="!this.familyList">
-  <h6>No friends found</h6>
+  <h6>No members found...</h6>
 </div>

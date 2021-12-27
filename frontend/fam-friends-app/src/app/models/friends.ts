@@ -19,3 +19,9 @@ export class friends {
     this.favFood = favFood;
   }
 }
+export interface IFriend {
+  name: string;
+  age: number;
+  hobbies: string;
+  favFood: string;
+}

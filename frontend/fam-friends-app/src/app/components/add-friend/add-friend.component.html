@@ -1,0 +1,27 @@
+<app-nav2></app-nav2>
+<h2>Friends !</h2>
+<h4>Here <i>you</i> can add a new friend.</h4>
+
+<br />
+<div class="fri">
+  <h6>Name:</h6>
+  <input #name type="text" name="name" placeholder="Name" />
+  <h6>Age:</h6>
+  <input #age type="number" name="age" placeholder="Age" />
+
+  <h6>Hobbies:</h6>
+  <input #hobbies type="text" name="hobbies" placeholder="Hobbies..." />
+
+  <h6>Favourite Food:</h6>
+  <input #favFood type="text" name="favfood" placeholder="Favourite Food" />
+</div>
+<br />
+<div class="button">
+  <button class="btn btn-success" (click)="addFriend(this.postFri)">
+    Add a Friend!
+  </button>
+</div>
+<br />
+<div *ngIf="statusString">
+  <h4>{{ statusString }}</h4>
+</div>

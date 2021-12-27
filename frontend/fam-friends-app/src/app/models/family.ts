@@ -19,3 +19,9 @@ export class family {
     this.favFood = favFood;
   }
 }
+export interface IFamily {
+  name: string;
+  age: number;
+  hobbies: string;
+  favFood: string;
+}

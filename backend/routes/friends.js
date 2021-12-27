@@ -13,7 +13,7 @@ router.get("/", verifyToken, async (req, res) => {
   }
 });
 
-router.post("/", verifyToken, async (req, res) => {
+router.post("/add", verifyToken, async (req, res) => {
   try {
     // const { id } = res.send(req.user._id);
     const id = req.user._id;
@@ -42,7 +42,7 @@ router.put("/", verifyToken, async (req, res) => {
         favFood: req.body.favFood,
       }
     );
-    res.json(updatedFriend);
+    res.json({ message: "Friend added!" });
   } catch (err) {
     res.json({ message: err });
   }
