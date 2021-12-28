@@ -1,1 +1,22 @@
-
+<h2>Edit a Member</h2>
+<div class="edit" *ngIf="famID">
+  <h6>Name :</h6>
+  <input #name type="text" placeholder="{{ famID.name }}" />
+  <h6>Age :</h6>
+  <input #age type="number" placeholder="{{ famID.age }}" />
+  <h6>Hobbies :</h6>
+  <input #hobbies type="text" placeholder="{{ famID.hobbies }}" />
+  <h6>Favourite Food :</h6>
+  <input #favFood type="text" placeholder="{{ famID.favFood }}" />
+</div>
+<div class="button">
+  <button type="button" class="btn btn-success" (click)="editMem()">
+    Save Changes
+  </button>
+  <button type="button" class="btn btn-warning" (click)="cancel()">
+    Cancel
+  </button>
+</div>
+<div class="status" *ngIf="statusString">
+  <h3>{{ this.statusString }}</h3>
+</div>

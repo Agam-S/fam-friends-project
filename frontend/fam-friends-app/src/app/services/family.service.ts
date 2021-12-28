@@ -11,6 +11,7 @@ export class FamilyService {
   header: any;
   demoURl = 'http://localhost:5000/family';
   demoURl1 = 'http://localhost:5000/family/add';
+  demoURl2 = 'http://localhost:5000/family/edit';
   constructor(private _http: HttpClient, private loginService: LoginService) {}
 
   getFamily(): Observable<family[]> {
@@ -29,6 +30,19 @@ export class FamilyService {
     this.header = new HttpHeaders().set('token', this.loginService.getToken()!);
 
     return this._http.delete<family>(this.demoURl + '/' + _id, {
+      headers: this.header,
+    });
+  }
+  getByID(_id: string): Observable<family> {
+    this.header = new HttpHeaders().set('token', this.loginService.getToken()!);
+    return this._http.get<family>(this.demoURl2 + '/' + _id, {
+      headers: this.header,
+    });
+  }
+  putbyID(editFam: IFamily, _id: string): Observable<IFamily> {
+    this.header = new HttpHeaders().set('token', this.loginService.getToken()!);
+
+    return this._http.put<IFamily>(this.demoURl2 + '/' + _id, editFam, {
       headers: this.header,
     });
   }
