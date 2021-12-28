@@ -13,7 +13,7 @@ router.get("/", verifyToken, async (req, res) => {
   }
 });
 
-router.get("/:_id", verifyToken, async (req, res) => {
+router.get("/edit/:_id", verifyToken, async (req, res) => {
   try {
     const friends = await Friends.findById(req.params._id);
     res.json(friends);

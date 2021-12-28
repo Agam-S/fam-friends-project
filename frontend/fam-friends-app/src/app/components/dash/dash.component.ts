@@ -20,6 +20,7 @@ export class DashComponent implements OnInit {
     if (!this.loginService.isLoggedIn()) {
       this.router.navigate(['/login']);
     }
+
     this.dashService.GetDash().subscribe((data) => {
       this.user = data;
       console.log(data);

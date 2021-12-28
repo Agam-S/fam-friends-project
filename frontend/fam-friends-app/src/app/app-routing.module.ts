@@ -5,6 +5,7 @@ import { AddFriendComponent } from './components/add-friend/add-friend.component
 import { DashComponent } from './components/dash/dash.component';
 import { FamEditComponent } from './components/fam-edit/fam-edit.component';
 import { FamilyComponent } from './components/family/family.component';
+import { FriEditComponent } from './components/fri-edit/fri-edit.component';
 import { FriendsComponent } from './components/friends/friends.component';
 import { LoginComponent } from './components/login/login.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'friends/add', component: AddFriendComponent },
   { path: 'family/add', component: AddFamComponent },
   { path: 'family/edit', component: FamEditComponent },
+  { path: 'friends/edit', component: FriEditComponent },
   { path: '**', pathMatch: 'full', component: NotFoundComponent },
 ];
 

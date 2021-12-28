@@ -12,6 +12,7 @@ export class FriendsService {
   header: any;
   demoURl = 'http://localhost:5000/friends';
   demoURl1 = 'http://localhost:5000/friends/add';
+  demoURl2 = 'http://localhost:5000/friends/edit';
   constructor(private _http: HttpClient, private loginService: LoginService) {}
 
   getFriends(): Observable<friends[]> {
@@ -30,6 +31,19 @@ export class FriendsService {
     this.header = new HttpHeaders().set('token', this.loginService.getToken()!);
 
     return this._http.delete<friends>(this.demoURl + '/' + _id, {
+      headers: this.header,
+    });
+  }
+  getByID(_id: string): Observable<friends> {
+    this.header = new HttpHeaders().set('token', this.loginService.getToken()!);
+    return this._http.get<friends>(this.demoURl2 + '/' + _id, {
+      headers: this.header,
+    });
+  }
+  putbyID(editFri: IFriend, _id: string): Observable<IFriend> {
+    this.header = new HttpHeaders().set('token', this.loginService.getToken()!);
+
+    return this._http.put<IFriend>(this.demoURl2 + '/' + _id, editFri, {
       headers: this.header,
     });
   }

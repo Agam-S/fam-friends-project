@@ -1,7 +1,8 @@
 h2,
 h6,
 button,
-input {
+input,
+.status {
   text-align: center;
   font-size: 20px;
   padding: 10px;
