@@ -1,0 +1,22 @@
+h2,
+h6,
+button,
+input,
+.status {
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.button,
+.edit {
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+}
+button,
+h2 {
+  margin: 20px;
+}
