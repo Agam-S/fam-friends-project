@@ -6,7 +6,7 @@ import { LoginService } from './login.service';
   providedIn: 'root',
 })
 export class DashService {
-  readonly demoUrl = 'http://localhost:5000/dash';
+  readonly demoUrl = 'https://whispering-sands-56141.herokuapp.com/dash';
   header: any;
   constructor(private _http: HttpClient, private loginService: LoginService) {}
 

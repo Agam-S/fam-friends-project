@@ -9,9 +9,9 @@ import { LoginService } from './login.service';
 })
 export class FamilyService {
   header: any;
-  demoURl = 'http://localhost:5000/family';
-  demoURl1 = 'http://localhost:5000/family/add';
-  demoURl2 = 'http://localhost:5000/family/edit';
+  demoURl = 'https://whispering-sands-56141.herokuapp.com/family';
+  demoURl1 = 'https://whispering-sands-56141.herokuapp.com/family/add';
+  demoURl2 = 'https://whispering-sands-56141.herokuapp.com/family/edit';
   constructor(private _http: HttpClient, private loginService: LoginService) {}
 
   getFamily(): Observable<family[]> {

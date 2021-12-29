@@ -10,9 +10,9 @@ import { IFriend } from '../models/friends';
 })
 export class FriendsService {
   header: any;
-  demoURl = 'http://localhost:5000/friends';
-  demoURl1 = 'http://localhost:5000/friends/add';
-  demoURl2 = 'http://localhost:5000/friends/edit';
+  demoURl = 'https://whispering-sands-56141.herokuapp.com/friends';
+  demoURl1 = 'https://whispering-sands-56141.herokuapp.com/friends/add';
+  demoURl2 = 'https://whispering-sands-56141.herokuapp.com/friends/edit';
   constructor(private _http: HttpClient, private loginService: LoginService) {}
 
   getFriends(): Observable<friends[]> {

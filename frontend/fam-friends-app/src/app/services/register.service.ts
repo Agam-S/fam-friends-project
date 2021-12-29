@@ -7,7 +7,7 @@ import { ISignup } from '../models/signup';
   providedIn: 'root',
 })
 export class RegisterService {
-  readonly demoUrl = 'http://localhost:5000/signup';
+  readonly demoUrl = 'https://whispering-sands-56141.herokuapp.com/signup';
   constructor(private _http: HttpClient) {}
 
   PostUser(user: ISignup): Observable<ISignup> {
