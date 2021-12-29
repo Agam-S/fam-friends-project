@@ -14,13 +14,9 @@ const friends = require("./routes/friends");
 const user = require("./routes/user");
 
 // MONGOOSE CONNECTION
-mongoose.connect(
-  "mongodb+srv://agam-s:usertest123@cluster0.pzagk.mongodb.net/famFriend?retryWrites=true&w=majority",
-  { useNewUrlParser: true },
-  () => {
-    console.log("Connected to DB");
-  }
-);
+mongoose.connect(process.env.DBS_URL, { useNewUrlParser: true }, () => {
+  console.log("Connected to DB");
+});
 
 // MIDDLEWARE CONFIGS
 // const corsOptions = {
