@@ -8,6 +8,7 @@
 }
 .fri:hover {
   background-color: #7591eb;
+  cursor: pointer;
 }
 
 h6 {

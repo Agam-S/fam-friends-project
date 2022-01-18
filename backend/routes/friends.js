@@ -13,6 +13,15 @@ router.get("/", verifyToken, async (req, res) => {
   }
 });
 
+router.get("/view/:_id", verifyToken, async (req, res) => {
+  try {
+    const friends = await Friends.findById(req.params._id);
+    res.json(friends);
+  } catch (error) {
+    res.json({ message: error });
+  }
+});
+
 router.get("/edit/:_id", verifyToken, async (req, res) => {
   try {
     const friends = await Friends.findById(req.params._id);

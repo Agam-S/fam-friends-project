@@ -13,6 +13,15 @@ router.get("/", verifyToken, async (req, res) => {
   }
 });
 
+router.get("/view/:_id", verifyToken, async (req, res) => {
+  try {
+    const family = await Family.findById(req.params._id);
+    res.json(family);
+  } catch (error) {
+    res.json({ message: error });
+  }
+});
+
 router.get("/edit/:_id", verifyToken, async (req, res) => {
   try {
     const family = await Family.findById(req.params._id);

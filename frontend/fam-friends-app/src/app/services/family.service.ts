@@ -12,6 +12,8 @@ export class FamilyService {
   demoURl = 'https://whispering-sands-56141.herokuapp.com/family';
   demoURl1 = 'https://whispering-sands-56141.herokuapp.com/family/add';
   demoURl2 = 'https://whispering-sands-56141.herokuapp.com/family/edit';
+  demoURl3 = 'https://whispering-sands-56141.herokuapp.com/family/view';
+
   constructor(private _http: HttpClient, private loginService: LoginService) {}
 
   getFamily(): Observable<family[]> {
@@ -36,6 +38,12 @@ export class FamilyService {
   getByID(_id: string): Observable<family> {
     this.header = new HttpHeaders().set('token', this.loginService.getToken()!);
     return this._http.get<family>(this.demoURl2 + '/' + _id, {
+      headers: this.header,
+    });
+  }
+  readByID(_id: string): Observable<family> {
+    this.header = new HttpHeaders().set('token', this.loginService.getToken()!);
+    return this._http.get<family>(this.demoURl3 + '/' + _id, {
       headers: this.header,
     });
   }

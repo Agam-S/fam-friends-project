@@ -61,4 +61,9 @@ export class FriendsComponent implements OnInit {
     this.data.changeMessage(this.idString);
     this.router.navigate(['/friends/edit']);
   }
+  viewFriend(_id: string) {
+    this.idString = _id;
+    this.data.changeMessage(this.idString);
+    this.router.navigate(['/friends/view']);
+  }
 }
