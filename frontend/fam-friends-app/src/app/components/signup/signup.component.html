@@ -2,30 +2,32 @@
 <div class="container">
   <h1>Sign Up Here !</h1>
   <div class="form">
-    <input
-      #name
-      type="text"
-      name="name"
-      placeholder="Name"
-      class="form"
-      required
-    />
-    <input
-      #email
-      type="email"
-      name="email"
-      placeholder="Email"
-      class="form"
-      required
-    />
-    <input
-      #password
-      type="password"
-      name="password"
-      placeholder="Password"
-      class="form"
-      required
-    />
+    <div class="input-boxes">
+      <input
+        #name
+        type="text"
+        name="name"
+        placeholder="Name"
+        class="form"
+        required
+      />
+      <input
+        #email
+        type="email"
+        name="email"
+        placeholder="Email"
+        class="form"
+        required
+      />
+      <input
+        #password
+        type="password"
+        name="password"
+        placeholder="Password"
+        class="form"
+        required
+      />
+    </div>
     <button class="btn btn-primary" (click)="signUp()">Sign Up !</button>
     <div class="alert" *ngIf="errorString">
       {{ errorString }}

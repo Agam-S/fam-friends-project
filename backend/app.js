@@ -14,7 +14,7 @@ const friends = require("./routes/friends");
 const user = require("./routes/user");
 
 // MONGOOSE CONNECTION
-mongoose.connect(process.env.DBS_URL, { useNewUrlParser: true }, () => {
+mongoose.connect(process.env.DBS_CONNECTION, { useNewUrlParser: true }, () => {
   console.log("Connected to DB");
 });
 
