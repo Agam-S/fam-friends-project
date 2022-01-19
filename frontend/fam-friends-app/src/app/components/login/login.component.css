@@ -47,6 +47,7 @@ h1 {
   margin: 0 auto;
   width: 100%;
 }
+.input-boxes input[type="text"],
 .input-boxes input[type="email"],
 .input-boxes input[type="password"] {
   border: 0;
@@ -56,16 +57,16 @@ h1 {
   text-align: center;
   border: 2px solid #da27d1;
   padding: 10px 10px;
-  width: 500px;
+  width: 50%;
   outline: none;
-  color: white;
+  color: rgb(0, 0, 0);
   border-radius: 24px;
   transition: 0.25s;
 }
-
+.input-boxes input[type="text"]:focus,
 .input-boxes input[type="email"]:focus,
 .input-boxes input[type="password"]:focus {
-  width: 600px;
+  width: 60%;
   border-color: #4e3abd;
 }
 
@@ -74,4 +75,9 @@ h1 {
 }
 .btn:hover {
   background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+@media only screen and (max-width: 768px) {
+  .input-boxes .input-boxes:focus {
+    width: 100%;
+  }
 }

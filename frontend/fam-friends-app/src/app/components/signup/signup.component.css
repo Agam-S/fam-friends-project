@@ -57,16 +57,16 @@ h1 {
   text-align: center;
   border: 2px solid #da27d1;
   padding: 10px 10px;
-  width: 500px;
+  width: 70%;
   outline: none;
-  color: white;
+  color: rgb(0, 0, 0);
   border-radius: 24px;
   transition: 0.25s;
 }
 .input-boxes input[type="text"]:focus,
 .input-boxes input[type="email"]:focus,
 .input-boxes input[type="password"]:focus {
-  width: 600px;
+  width: 80%;
   border-color: #4e3abd;
 }
 
@@ -75,4 +75,10 @@ h1 {
 }
 .btn:hover {
   background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+@media only screen and (min-width: 500px) {
+  .inputbox .input-boxes:focus {
+    width: 100%;
+  }
 }
