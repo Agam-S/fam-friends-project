@@ -11,12 +11,10 @@
   <input #favFood type="text" placeholder="{{ friID.favFood }}" />
 </div>
 <div class="button">
-  <button type="button" class="btn btn-success" (click)="editFriend()">
+  <button type="button" class="btn btnE" (click)="editFriend()">
     Save Changes
   </button>
-  <button type="button" class="btn btn-warning" (click)="cancel()">
-    Cancel
-  </button>
+  <button type="button" class="btn btnC" (click)="cancel()">Cancel</button>
 </div>
 <div class="status" *ngIf="statusString">
   <h3>{{ this.statusString }}</h3>

@@ -35,14 +35,13 @@ export class FriEditComponent implements OnInit {
     this.subscription = this.data.currentMessage.subscribe(
       (id) => (this.id = id)
     );
-    console.log(this.id);
+
     if (this.id == 'default message') {
       this.router.navigate(['/friends']);
     }
 
     this.friService.getByID(this.id).subscribe((res) => {
       this.friID = res;
-      console.log(this.friID);
     });
   }
 
@@ -73,7 +72,6 @@ export class FriEditComponent implements OnInit {
     this.friService.putbyID(this.editFri, this.id).subscribe(
       (res: any) => {
         this.statusString = 'Friend Successfully Edited!';
-        console.log(this.id);
       },
       (err: any) => {
         this.statusString = err.error;

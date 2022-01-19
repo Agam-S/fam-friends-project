@@ -1,14 +1,21 @@
 .dash {
-  display: inline-block;
-  margin: 30px;
-  border: 10px;
+  text-align: center;
+  margin: 15px;
+  border: 1px solid;
   border-style: double;
   padding: 10px;
-  background-color: white;
+  background-image: linear-gradient(to right, #8a888a 0%, #e1eef6 100%);
+  border-radius: 5px;
+  width: 50%;
 }
-.title {
-  font-size: 40px;
-  font-weight: bold;
+
+.center {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+h2 {
+  padding-top: 20px;
   text-align: center;
-  color: rgb(238, 241, 37);
 }

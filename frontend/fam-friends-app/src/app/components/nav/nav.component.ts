@@ -9,4 +9,12 @@ export class NavComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  openNav() {
+    document.getElementById('myNav').style.height = '100%';
+  }
+
+  closeNav() {
+    document.getElementById('myNav').style.height = '0%';
+  }
 }

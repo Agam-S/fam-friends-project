@@ -18,4 +18,12 @@ export class Nav2Component implements OnInit {
       this.router.navigate(['/login']);
     }
   }
+  openNav() {
+    // get element by id "myNav" then set its style.height to 100%
+    document.getElementById('myNav').style.height = '100%';
+  }
+
+  closeNav() {
+    document.getElementById('myNav').style.height = '0%';
+  }
 }

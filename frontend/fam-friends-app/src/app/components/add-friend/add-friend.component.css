@@ -1,6 +1,6 @@
 h2 {
   text-align: center;
-  color: yellow;
+  color: rgb(119, 67, 214);
 }
 .btn {
   font-size: 20px;
@@ -31,6 +31,12 @@ h4:hover {
 }
 
 input:focus {
-  background-color: lightblue;
-  box-shadow: 0 0 0 0.4rem rgb(226, 213, 95);
+  box-shadow: 0 0 0 0.4rem rgb(144, 213, 219);
+}
+
+.btnS {
+  background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+}
+.btnC {
+  background-image: linear-gradient(to top, #f83200 0%, #ee5b2e 100%);
 }

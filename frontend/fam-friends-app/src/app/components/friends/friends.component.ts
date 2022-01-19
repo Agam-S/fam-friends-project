@@ -29,7 +29,6 @@ export class FriendsComponent implements OnInit {
     } else
       this.friendsServices.getFriends().subscribe((friends) => {
         this.friendsList = friends;
-        console.log(friends);
       });
     this.subscription = this.data.currentMessage.subscribe(
       (message) => (this.id = message)
@@ -57,7 +56,7 @@ export class FriendsComponent implements OnInit {
   }
   editFri(_id: string) {
     this.idString = _id;
-    console.log(this.idString);
+
     this.data.changeMessage(this.idString);
     this.router.navigate(['/friends/edit']);
   }

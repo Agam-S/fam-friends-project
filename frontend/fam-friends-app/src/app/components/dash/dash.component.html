@@ -1,6 +1,11 @@
 <app-nav2></app-nav2>
-<h2 class="title">User's About info</h2>
-<div class="dash" *ngIf="this.user">
-  <h5>Name: {{ user.name }}</h5>
-  <h5>Email: {{ user.email }}</h5>
+<h2>Dashboard</h2>
+<br />
+<div class="center">
+  <div class="dash" *ngIf="user">
+    <h5>Name: {{ user.name }}</h5>
+  </div>
+  <div class="dash">
+    <h5>Email: {{ user.email }}</h5>
+  </div>
 </div>

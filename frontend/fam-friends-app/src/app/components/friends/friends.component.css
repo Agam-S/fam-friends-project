@@ -1,20 +1,20 @@
 .fri {
-  display: inline-block;
-  margin: 10px;
+  text-align: center;
+  margin: 15px;
   border: 1px solid;
   border-style: double;
-
   padding: 10px;
   background-image: linear-gradient(to right, #fbf6f0 0%, #9ea9b1 100%);
-}
-.fri:hover {
-  background-color: #7591eb;
-  cursor: pointer;
+  border-radius: 5px;
+  width: 65%;
 }
 
-h6 {
-  padding: 5px;
+.center {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
+
 h2 {
   text-align: center;
 }
@@ -27,4 +27,15 @@ h2 {
 .empty {
   text-align: center;
   font-size: 30px;
+}
+
+.btnView {
+  background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+}
+
+.btnEdit {
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+.btnDelete {
+  background-image: linear-gradient(-60deg, #ee1515 0%, #ee1d38 100%);
 }

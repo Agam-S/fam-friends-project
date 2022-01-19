@@ -1,13 +1,15 @@
 <app-nav2></app-nav2>
 <h2>Friends !</h2>
 <h4>Here <i>you</i> can add, edit, or delete your friends.</h4>
-<button class="btn btn-success" (click)="addFriend()">Add a Friend</button>
+<button class="btn btnView" (click)="addFriend()">Add a Friend</button>
 <br />
-<div class="fri" *ngFor="let user of this.friendsList">
-  <h5>Name: {{ user.name }}</h5>
-  <button class="btn btn-success" (click)="viewFriend(user._id)">View</button>
-  <button class="btn btn-warning" (click)="editFri(user._id)">Edit</button>
-  <button class="btn btn-danger" (click)="deleteFri(user._id)">Delete</button>
+<div class="center">
+  <div class="fri" *ngFor="let user of this.friendsList">
+    <h5>{{ user.name }}</h5>
+    <button class="btn btnView" (click)="viewFriend(user._id)">View</button>
+    <button class="btn btnEdit" (click)="editFri(user._id)">Edit</button>
+    <button class="btn btnDelete" (click)="deleteFri(user._id)">Delete</button>
+  </div>
 </div>
 <div *ngIf="this.friendsList == ''">
   <h6 class="empty"><i>No friends found...</i></h6>

@@ -12,11 +12,20 @@ input,
 .edit {
   text-align: center;
 }
-
+input:focus {
+  box-shadow: 0 0 0 0.4rem rgb(144, 213, 219);
+}
 h2 {
   font-size: 30px;
 }
 button,
 h2 {
   margin: 20px;
+}
+
+.btnE {
+  background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+}
+.btnC {
+  background-image: linear-gradient(-60deg, #ee1515 0%, #ee1d38 100%);
 }

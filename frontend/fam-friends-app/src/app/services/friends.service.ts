@@ -14,8 +14,6 @@ export class FriendsService {
   demoURl1 = 'https://whispering-sands-56141.herokuapp.com/friends/add';
   demoURl2 = 'https://whispering-sands-56141.herokuapp.com/friends/edit';
   demoURl3 = 'https://whispering-sands-56141.herokuapp.com/friends/view';
-  demoURl4 = 'http://localhost:8080/friends/view';
-
   constructor(private _http: HttpClient, private loginService: LoginService) {}
 
   getFriends(): Observable<friends[]> {
@@ -45,7 +43,7 @@ export class FriendsService {
   }
   readByID(_id: string): Observable<friends> {
     this.header = new HttpHeaders().set('token', this.loginService.getToken()!);
-    return this._http.get<friends>(this.demoURl4 + '/' + _id, {
+    return this._http.get<friends>(this.demoURl3 + '/' + _id, {
       headers: this.header,
     });
   }

@@ -28,7 +28,6 @@ export class FamilyComponent implements OnInit, OnDestroy {
     } else
       this.familyService.getFamily().subscribe((family) => {
         this.familyList = family;
-        console.log(family);
       });
     this.subscription = this.data.currentMessage.subscribe(
       (message) => (this.id = message)
@@ -58,8 +57,13 @@ export class FamilyComponent implements OnInit, OnDestroy {
   }
   editFam(_id: string) {
     this.idString = _id;
-    console.log(this.idString);
+
     this.data.changeMessage(this.idString);
     this.router.navigate(['/family/edit']);
+  }
+  viewFam(_id: string) {
+    this.idString = _id;
+    this.data.changeMessage(this.idString);
+    this.router.navigate(['/family/view']);
   }
 }

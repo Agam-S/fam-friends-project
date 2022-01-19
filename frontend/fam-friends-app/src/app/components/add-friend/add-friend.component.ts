@@ -54,4 +54,7 @@ export class AddFriendComponent implements OnInit {
       }
     );
   }
+  goBack() {
+    this.router.navigate(['/friends']);
+  }
 }

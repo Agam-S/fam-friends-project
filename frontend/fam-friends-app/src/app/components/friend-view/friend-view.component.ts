@@ -31,14 +31,13 @@ export class FriendViewComponent implements OnInit {
     this.subscription = this.data.currentMessage.subscribe(
       (id) => (this.id = id)
     );
-    console.log(this.id);
+
     if (this.id == 'default message') {
       this.router.navigate(['/friends']);
     }
 
     this.friService.readByID(this.id).subscribe((res) => {
       this.friID = res;
-      console.log(this.friID);
     });
   }
 
@@ -46,6 +45,9 @@ export class FriendViewComponent implements OnInit {
     this.subscription.unsubscribe();
   }
   cancel() {
+    this.router.navigate(['/friends']);
+  }
+  goBack() {
     this.router.navigate(['/friends']);
   }
 }

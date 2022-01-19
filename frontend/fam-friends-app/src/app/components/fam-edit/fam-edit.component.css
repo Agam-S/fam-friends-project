@@ -7,6 +7,9 @@ input,
   font-size: 20px;
   padding: 10px;
 }
+input:focus {
+  box-shadow: 0 0 0 0.4rem rgb(144, 213, 219);
+}
 
 .button,
 .edit {
@@ -19,4 +22,11 @@ h2 {
 button,
 h2 {
   margin: 20px;
+}
+
+.btnS {
+  background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+}
+.btnC {
+  background-image: linear-gradient(-60deg, #ee1515 0%, #ee1d38 100%);
 }

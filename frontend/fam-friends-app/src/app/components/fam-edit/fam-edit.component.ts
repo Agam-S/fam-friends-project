@@ -41,14 +41,13 @@ export class FamEditComponent implements OnInit, OnDestroy {
     this.subscription = this.data.currentMessage.subscribe(
       (id) => (this.id = id)
     );
-    console.log(this.id);
+
     if (this.id == 'default message') {
       this.router.navigate(['/family']);
     }
 
     this.familySer.getByID(this.id).subscribe((res) => {
       this.famID = res;
-      console.log(this.famID);
     });
   }
 
@@ -79,7 +78,6 @@ export class FamEditComponent implements OnInit, OnDestroy {
     this.familySer.putbyID(this.editFam, this.id).subscribe(
       (res: any) => {
         this.statusString = 'Member Successfully Edited!';
-        console.log(this.id);
       },
       (err: any) => {
         this.statusString = err.error;

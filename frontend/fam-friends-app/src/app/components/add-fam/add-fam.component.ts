@@ -54,4 +54,7 @@ export class AddFamComponent implements OnInit {
       }
     );
   }
+  goBack() {
+    this.router.navigate(['/family']);
+  }
 }

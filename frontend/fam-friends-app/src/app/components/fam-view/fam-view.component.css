@@ -1,0 +1,28 @@
+.fam {
+  text-align: center;
+  margin: 15px;
+  border: 1px solid;
+  border-style: double;
+  padding: 10px;
+  background-image: linear-gradient(to right, #ee9af1 0%, #92c9f0 100%);
+  border-radius: 5px;
+  width: 50%;
+}
+
+.center {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+h2 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.btn {
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  background-image: linear-gradient(-60deg, #e64fc5 0%, #e63561 100%);
+}

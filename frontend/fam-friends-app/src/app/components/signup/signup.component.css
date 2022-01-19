@@ -4,8 +4,12 @@
   text-align: center;
   padding: 15px;
   padding-top: 50px;
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-  border-radius: 5%;
+  background-image: linear-gradient(
+    to top,
+    #dad4ec 0%,
+    #dad4ec 1%,
+    #f3e7e9 100%
+  );
 }
 input,
 button {
@@ -19,7 +23,6 @@ button {
   padding: 10px;
 }
 .form:focus {
-  border-color: #ffc107;
   box-shadow: 0 0 0 0.4rem rgba(116, 49, 192, 0.25);
 }
 
@@ -31,10 +34,9 @@ input {
   width: 85%;
 }
 h1 {
-  /* move h1 above */
   text-align: center;
-  font-size: 50px;
-  color: #3c3ead;
+  font-size: 40px;
+  color: #af50fdc5;
 }
 
 .input-boxes {
@@ -44,4 +46,33 @@ h1 {
   align-items: center;
   margin: 0 auto;
   width: 100%;
+}
+.input-boxes input[type="text"],
+.input-boxes input[type="email"],
+.input-boxes input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #da27d1;
+  padding: 10px 10px;
+  width: 500px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.input-boxes input[type="text"]:focus,
+.input-boxes input[type="email"]:focus,
+.input-boxes input[type="password"]:focus {
+  width: 600px;
+  border-color: #4e3abd;
+}
+
+.btn {
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+.btn:hover {
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }

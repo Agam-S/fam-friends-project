@@ -23,7 +23,6 @@ export class DashComponent implements OnInit {
 
     this.dashService.GetDash().subscribe((data) => {
       this.user = data;
-      console.log(data);
     });
   }
 }

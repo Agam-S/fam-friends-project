@@ -1,1 +1,20 @@
-<p>fam-view works!</p>
+<app-nav2></app-nav2>
+<h2>Family !</h2>
+<br />
+<div class="center">
+  <div class="fam" *ngIf="famID">
+    <h5>Name: {{ famID.name }}</h5>
+  </div>
+  <div class="fam">
+    <h5>Age: {{ famID.age }}</h5>
+  </div>
+  <div class="fam">
+    <h5>Hobbies: {{ famID.hobbies }}</h5>
+  </div>
+  <div class="fam">
+    <h5>Favourite Food: {{ famID.favFood }}</h5>
+  </div>
+</div>
+<div class="center">
+  <button class="btn" (click)="goBack()">Go Back</button>
+</div>

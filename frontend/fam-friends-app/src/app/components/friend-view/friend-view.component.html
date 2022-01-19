@@ -1,9 +1,20 @@
 <app-nav2></app-nav2>
-<h2>Friend</h2>
-<div class="view" *ngIf="friID">
-  <h6>Name: {{ friID.name }}</h6>
-  <h6>Age: {{ friID.age }}</h6>
-  <h6>Hobbies: {{ friID.hobbies }}</h6>
-  <h6>Favourite Food: {{ friID.favFood }}</h6>
+<h2>Friends !</h2>
+<br />
+<div class="center">
+  <div class="fri" *ngIf="friID">
+    <h5>Name: {{ friID.name }}</h5>
+  </div>
+  <div class="fri">
+    <h5>Age: {{ friID.age }}</h5>
+  </div>
+  <div class="fri">
+    <h5>Hobbies: {{ friID.hobbies }}</h5>
+  </div>
+  <div class="fri">
+    <h5>Favourite Food: {{ friID.favFood }}</h5>
+  </div>
 </div>
-<div class="button"></div>
+<div class="center">
+  <button class="btn" (click)="goBack()">Go Back</button>
+</div>

@@ -1,15 +1,15 @@
 <app-nav2></app-nav2>
 <h2>Family !</h2>
 <h4>Here <i>you</i> can add, edit, or delete your family members.</h4>
-<button class="btn btn-success" (click)="addMem()">Add a Member</button>
+<button class="btn btnView" (click)="addMem()">Add a Member</button>
 <br />
-<div class="fam" *ngFor="let user of this.familyList">
-  <h6>Name: {{ user.name }}</h6>
-  <h6>Age: {{ user.age }}</h6>
-  <h6>Hobbies: {{ user.hobbies }}</h6>
-  <h6>Favourite Food: {{ user.favFood }}</h6>
-  <button class="btn btn-warning" (click)="editFam(user._id)">Edit</button>
-  <button class="btn btn-danger" (click)="deleteFam(user._id)">Delete</button>
+<div class="center">
+  <div class="fam" *ngFor="let user of this.familyList">
+    <h5>{{ user.name }}</h5>
+    <button class="btn btnView" (click)="viewFam(user._id)">View</button>
+    <button class="btn btnEdit" (click)="editFam(user._id)">Edit</button>
+    <button class="btn btnDelete" (click)="deleteFam(user._id)">Delete</button>
+  </div>
 </div>
 <div *ngIf="this.familyList == ''">
   <h6 class="empty"><i>No members found...</i></h6>

@@ -1,5 +1,6 @@
 // PACKAGES
 const router = require("express").Router();
+const friends = require("../models/friends");
 // IMPORT FILES
 const Friends = require("../models/friends");
 const verifyToken = require("./verifyToken");
